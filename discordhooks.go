@@ -43,7 +43,7 @@ type Hook struct {
 	Attachments []Attachment `json:"attachments"`
 }
 
-func executeWebhook(link string, data []byte) {
+func ExecuteWebhook(link string, data []byte) {
 
 	req, err := http.NewRequest("POST", link, bytes.NewBuffer(data))
 	if err != nil {
@@ -60,7 +60,7 @@ func executeWebhook(link string, data []byte) {
 	if resp.StatusCode == 429 {
 		fmt.Println("Rate limit reached")
 		time.Sleep(time.Second * 5)
-		executeWebhook(link, data)
+		ExecuteWebhook(link, data)
 	}
 }
 func SendEmbeds(link string, embeds []Embed) {
