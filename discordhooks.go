@@ -71,7 +71,7 @@ func SendEmbeds(link string, embeds []Embed) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	executeWebhook(link, payload)
+	ExecuteWebhook(link, payload)
 
 }
 func SendEmbed(link string, embeds Embed) {
@@ -82,6 +82,6 @@ func SendEmbed(link string, embeds Embed) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	executeWebhook(link, payload)
+	ExecuteWebhook(link, payload)
 
 }
