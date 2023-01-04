@@ -27,7 +27,14 @@ type Footer struct {
 	Text     string `json:"text"`
 	Icon_url string `json:"icon_url"`
 }
+type Author struct {
+	Name     string `json:"name"`
+	Url      string `json:"url"`
+	Icon_url string `json:"icon_url"`
+}
+
 type Embed struct {
+	Author      Author    `json:"author"`
 	Title       string    `json:"title"`
 	Url         string    `json:"url"`
 	Description string    `json:"description"`
