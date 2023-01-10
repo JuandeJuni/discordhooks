@@ -27,14 +27,15 @@ type AuthorS struct {
 }
 
 type EmbedS struct {
-	Title     string     `json:"title"`
-	URL       string     `json:"url"`
-	Color     int        `json:"color"`
-	Fields    []FieldS   `json:"fields"`
-	Author    AuthorS    `json:"author"`
-	Footer    FooterS    `json:"footer"`
-	Timestamp time.Time  `json:"timestamp"`
-	Thumbnail ThumbnailS `json:"thumbnail"`
+	Title       string     `json:"title"`
+	Description string     `json:"description"`
+	URL         string     `json:"url"`
+	Color       int        `json:"color"`
+	Fields      []FieldS   `json:"fields"`
+	Author      AuthorS    `json:"author"`
+	Footer      FooterS    `json:"footer"`
+	Timestamp   time.Time  `json:"timestamp"`
+	Thumbnail   ThumbnailS `json:"thumbnail"`
 }
 type Attachment struct {
 	ID          string `json:"id"`
@@ -42,7 +43,7 @@ type Attachment struct {
 	Filename    string `json:"filename"`
 }
 type NewHook struct {
-	Content     interface{}  `json:"content"`
+	Content     string       `json:"content"`
 	Embeds      []EmbedS     `json:"embeds"`
 	Username    string       `json:"username"`
 	AvatarURL   string       `json:"avatar_url"`
